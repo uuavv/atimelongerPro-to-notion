@@ -1,0 +1,16 @@
+{
+  "togglApiToken": "53b4322810f9617986cf06eb6b8f79a4",
+  "togglUsername": "uuavvo@gmail.com",
+  "togglPassword": "uuavv123A",
+  "togglWorkspaceId": "",
+  "direction": "both",
+  "atimeloggerActivityTypeName": "toggl",
+  "atimeloggerToTogglTypeNames": "",
+  "includeGoogleCalendar": false,
+  "togglSourceFilter": "manual-only",
+  "calendarSourceKeywords": "calendar,google calendar,outlook,ical",
+  "duplicatePolicy": "exact",
+  "autoSyncEnabled": true,
+  "autoTogglToAtimelogger": true,
+  "autoAtimeloggerToToggl": true
+}

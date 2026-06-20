@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "atimelogger-notion-worker-v3",
+  "main": "src/atimelogger-notion-worker.js",
+  "compatibility_date": "2026-05-01",
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    "crons": ["10 22 * * *"]
+  },
+  "vars": {
+    "SYNC_TIMEZONE": "Asia/Shanghai",
+    "ATIMELOGGER_BASE_URL": "https://app.atimelogger.pro",
+    "ATIMELOGGER_NOTION_LOOKBACK_DAYS": "1",
+    "ATIMELOGGER_NOTION_TYPE_IDS": "",
+    "ATIMELOGGER_NOTION_TAGS": "",
+    "NOTION_TITLE_PROPERTY": "Name",
+    "NOTION_ATIMELOGGER_INTERVAL_ID_PROPERTY": "aTimeLogger Interval ID"
+  }
+}

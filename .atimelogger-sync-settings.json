@@ -1,0 +1,9 @@
+{
+  "sync_when_app_opens": false,
+  "calendar_sync_enabled": true,
+  "fixed_schedule_enabled": true,
+  "frequency": "每天",
+  "sync_time": "06:00",
+  "weekday": "星期一",
+  "last_scheduled_run": "2026-06-19"
+}

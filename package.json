@@ -1,0 +1,24 @@
+{
+  "name": "atimelogger-toggl-sync-v3",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-google-calendar-to-atimelogger.mjs",
+    "sync:dry-run": "node scripts/sync-google-calendar-to-atimelogger.mjs --dry-run",
+    "sync:atimelogger-calendar": "node scripts/sync-google-calendar-to-atimelogger.mjs",
+    "sync:toggl-atimelogger": "node scripts/sync-toggl-atimelogger.mjs",
+    "notion:setup-fields": "python configure_atimelogger_notion_fields.py",
+    "notion:github-deploy": "node scripts/github-deploy-atimelogger-notion-worker.mjs",
+    "worker:atimelogger-notion:dev": "npx wrangler dev -c wrangler.atimelogger-notion.jsonc",
+    "worker:atimelogger-notion:deploy": "npx wrangler deploy -c wrangler.atimelogger-notion.jsonc",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "luxon": "^3.7.2",
+    "node-ical": "^0.26.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.103.0"
+  }
+}
