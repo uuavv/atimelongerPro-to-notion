@@ -12,6 +12,8 @@
     "notion:github-deploy": "node scripts/github-deploy-atimelogger-notion-worker.mjs",
     "worker:atimelogger-notion:dev": "npx wrangler dev -c wrangler.atimelogger-notion.jsonc",
     "worker:atimelogger-notion:deploy": "npx wrangler deploy -c wrangler.atimelogger-notion.jsonc",
+    "worker:gcal-atimelogger:dev": "npx wrangler dev -c wrangler.gcal-atimelogger.jsonc",
+    "worker:gcal-atimelogger:deploy": "npx wrangler deploy -c wrangler.gcal-atimelogger.jsonc",
     "test": "node --test"
   },
   "dependencies": {
