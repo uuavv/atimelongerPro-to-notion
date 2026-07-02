@@ -1,0 +1,12 @@
+# 模板：拷贝到 /etc/systemd/system/gcal-atl-sync.timer
+# （推荐直接用 deploy/install-systemd.sh 自动生成）
+[Unit]
+Description=Run gcal-atl sync every 15 min
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=15min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

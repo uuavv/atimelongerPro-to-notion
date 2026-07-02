@@ -1,0 +1,11 @@
+# 模板：拷贝到 /etc/systemd/system/gcal-atl-sync.service，把路径换成你的实际目录
+# （推荐直接用 deploy/install-systemd.sh 自动生成）
+[Unit]
+Description=Google Calendar <-> aTimeLogger sync
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/atimelongerPro-to-notion/scripts
+ExecStart=/usr/bin/node /root/atimelongerPro-to-notion/scripts/gcal-atimelogger-sync.mjs
