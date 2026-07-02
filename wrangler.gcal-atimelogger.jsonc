@@ -1,0 +1,27 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "gcal-atimelogger-worker",
+	"main": "src/gcal-atimelogger-worker.js",
+	"compatibility_date": "2026-05-01",
+	"observability": {
+		"enabled": true
+	},
+	// 每 15 分钟双向同步一次；按需修改 cron 表达式
+	"triggers": {
+		"crons": ["*/15 * * * *"]
+	},
+	"vars": {
+		"SYNC_TIMEZONE": "Asia/Shanghai",
+		"SYNC_DIRECTION": "both",
+		"ATIMELOGGER_BASE_URL": "https://app.atimelogger.pro",
+		"GCAL_CALENDAR_ID": "primary",
+		"GCAL_ATL_LOOKBACK_DAYS": "1",
+		"GCAL_ATL_LOOKAHEAD_DAYS": "1",
+		"ATIMELOGGER_ACTIVITY_TYPE_NAME": "工作",
+		"GCAL_DRY_RUN": "true"
+	}
+	// 机密通过 wrangler secret put 设置（不要写在这里）：
+	//   GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET / GOOGLE_REFRESH_TOKEN
+	//   ATIMELOGGER_USERNAME / ATIMELOGGER_PASSWORD  （或 ATIMELOGGER_TOKEN）
+	//   GCAL_ATL_SYNC_SECRET  （手动 /sync 端点鉴权）
+}

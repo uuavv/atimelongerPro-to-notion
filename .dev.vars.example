@@ -47,3 +47,19 @@ ATIMELOGGER_NOTION_SYNC_SECRET=choose-a-long-random-secret
 # ATIMELOGGER_NOTION_FILTER_ID=filter-uuid
 # 可选：定时同步时补同步最近几天。
 ATIMELOGGER_NOTION_LOOKBACK_DAYS=1
+
+# ===== Google Calendar <-> aTimeLogger 双向同步 Worker (wrangler.gcal-atimelogger.jsonc) =====
+# 双向需要写日历，不能用只读 iCal，需 Google Calendar API OAuth（scope: calendar）
+GOOGLE_CLIENT_ID=your-google-oauth-client-id
+GOOGLE_CLIENT_SECRET=your-google-oauth-client-secret
+GOOGLE_REFRESH_TOKEN=your-google-oauth-refresh-token
+# 日历 ID，主日历填 primary，或填具体日历的 ID
+GCAL_CALENDAR_ID=primary
+# both / gcal-to-atl / atl-to-gcal
+SYNC_DIRECTION=both
+GCAL_ATL_LOOKBACK_DAYS=1
+GCAL_ATL_LOOKAHEAD_DAYS=1
+# 手动 /sync 端点鉴权密钥
+GCAL_ATL_SYNC_SECRET=choose-a-long-random-secret
+# 试运行开关（true 时只打印不写入）
+GCAL_DRY_RUN=true
